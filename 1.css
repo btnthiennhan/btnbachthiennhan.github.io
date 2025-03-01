@@ -1,0 +1,134 @@
+/* Tổng thể trang */
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: white;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+/* Hộp chứa nội dung */
+.container {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+    width: 80%;
+    max-width: 600px;
+    backdrop-filter: blur(10px);
+    transform: scale(0.9);
+    animation: popUp 0.8s ease-in-out forwards;
+}
+
+/* Hiệu ứng tiêu đề */
+.header-title {
+    font-size: 2.5em;
+    font-weight: bold;
+    margin: 10px 0;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+    animation: slideIn 1s ease-in-out;
+}
+
+.header-subtitle {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+    opacity: 0;
+    animation: fadeIn 1.5s ease-in-out 0.5s forwards;
+}
+
+/* Tiêu đề chung cho các phần */
+.section-title {
+    font-size: 1.8em;
+    border-bottom: 2px solid white;
+    display: inline-block;
+    padding-bottom: 5px;
+    margin-bottom: 15px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.section-title:hover {
+    transform: scale(1.1);
+}
+
+/* Phần giới thiệu */
+.about-text {
+    font-size: 1.1em;
+    line-height: 1.6;
+}
+
+/* Phần kỹ năng */
+.skills-list {
+    list-style: none;
+    padding: 0;
+}
+
+.skill-item {
+    font-size: 1.1em;
+    background: rgba(255, 255, 255, 0.2);
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 8px;
+    transition: background 0.3s ease-in-out, transform 0.2s ease-in-out;
+}
+
+.skill-item:hover {
+    background: rgba(255, 255, 255, 0.3);
+    transform: translateY(-5px);
+}
+
+/* Phần liên hệ */
+.contact-info {
+    font-size: 1.1em;
+    margin: 5px 0;
+    opacity: 0;
+    animation: fadeIn 1.5s ease-in-out 1s forwards;
+}
+
+/* Phần bản quyền */
+.footer {
+    margin-top: 20px;
+    opacity: 0.8;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.footer:hover {
+    opacity: 1;
+}
+
+/* Hiệu ứng động */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes popUp {
+    from {
+        transform: scale(0.9);
+    }
+    to {
+        transform: scale(1);
+    }
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
